@@ -36,7 +36,7 @@ with mss.mss() as sct:
         # Предсказания
         prediction = float(model(input_data, training=False).numpy())
 
-        # 5. МГНОВЕННЫЙ КЛИК БЕЗ ЗАЖАТИЯ
+        # мгновенный клик без нажатия
         if prediction > jump_threshold:
             # Стреляем кликом мгновенно
             keyboard.press("space")
