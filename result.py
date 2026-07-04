@@ -5,7 +5,7 @@ import mss
 import numpy as np
 import tensorflow as tf
 
-# 2. ЗАГРУЗКА МОДЕЛИ
+# Загрузка модели
 model_path = "dino.keras"
 model = tf.keras.models.load_model(model_path)
 
