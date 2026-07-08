@@ -6,7 +6,7 @@ import keyboard
 import mss
 import numpy as np
 
-# путь к папка
+# путь к папкам
 file_no = r"C:\Users\RobotComp.ru\Desktop\flapyy\linear\no"
 file_yes = r"C:\Users\RobotComp.ru\Desktop\flapyy\linear\yes"
 
