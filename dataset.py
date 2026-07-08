@@ -23,7 +23,7 @@ with mss.mss() as sct:
             break
 
         # Делаем скриншот текущего кадра
-        screen = sct.grab(monitor)
+        screen = sct.grab(monitor)# делаем запись экрана
         screen_array = np.array(screen)[:, :, :3] #срезаем 4 канал, чтобы было BGR
 
         # сохраняем в папку для прыжков
@@ -31,7 +31,7 @@ with mss.mss() as sct:
             count_yes += 1
             file_name = f"image_{count_yes}.png"
             path = os.path.join(file_yes, file_name)
-            cv2.imwrite(path, screen_array)
+            cv2.imwrite(path, screen_array) # ждёт формат BGR
 
             while keyboard.is_pressed("space"): # чтобы не было спама при нажати на пробел
                 time.sleep(0.01)
@@ -44,7 +44,7 @@ with mss.mss() as sct:
                 file_name = f"image_{count_no}.png"
                 path = os.path.join(file_no, file_name)
 
-                cv2.imwrite(path, screen_array)
+                cv2.imwrite(path, screen_array) # ждёт формат BGR
 
         # Микро-задержка для стабильности
         time.sleep(0.07)
