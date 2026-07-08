@@ -24,7 +24,7 @@ with mss.mss() as sct:
 
         # Делаем скриншот текущего кадра
         screen = sct.grab(monitor)
-        screen_array = np.array(screen)[:, :, :3] #срезаем 4 канал, чтобы было RGB
+        screen_array = np.array(screen)[:, :, :3] #срезаем 4 канал, чтобы было BGR
 
         # сохраняем в папку для прыжков
         if keyboard.is_pressed("space"):
